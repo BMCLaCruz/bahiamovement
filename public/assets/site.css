@@ -375,3 +375,9 @@ h2 {
 .day ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
 .day li { display: flex; flex-direction: column; font-weight: 600; font-size: 0.9375rem; }
 .day .time { color: var(--concrete); font-weight: 500; font-size: 0.875rem; font-variant-numeric: tabular-nums; }
+
+/* ---------- dojo photo (home) ---------- */
+
+.dojo { margin: 0; padding-top: var(--gap); border-top: 1px solid rgba(0,0,0,0.1); }
+.dojo img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; background: #ddd; }
+.dojo + .schedule { border-top: 0; }
