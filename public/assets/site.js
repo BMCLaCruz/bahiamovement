@@ -1,4 +1,4 @@
-/* Costa Combat launch pages — language toggle + WhatsApp prefill.
+/* Costa Combat pages — language toggle + WhatsApp prefill.
    Spanish is in the HTML; English lives in DICT below. If this script fails,
    the page still reads correctly in Spanish. */
 (function () {
@@ -28,12 +28,17 @@
     b: {
       es: "Hola, vi {src} de Costa Combat. Quiero información de horarios y planes.",
       en: "Hi, I saw the Costa Combat {src}. I'd like information on class times and plans."
+    },
+    home: {
+      es: "Hola, vi {src} de Costa Combat. Quiero tomar mi primera clase gratis.",
+      en: "Hi, I saw the Costa Combat {src}. I'd like to book my free first class."
     }
   };
 
   function sourceWord(lang) {
     var p = new URLSearchParams(location.search);
-    var s = (p.get("utm_source") || "flyer").toLowerCase();
+    // Campaign pages are reached from print; the home page usually isn't.
+    var s = (p.get("utm_source") || (variant === "home" ? "" : "flyer")).toLowerCase();
     return (SOURCE[s] || SOURCE._default)[lang];
   }
 

@@ -1,13 +1,11 @@
 /* Costa Combat — launch campaign landing pages
-   Colors and type per Bahia Movement Center Brand Reference v1.3 */
+   Colors and type per Costa Combat Brand Reference v2.3 */
 
 :root {
   --paper:       #F4F3F0;
   --costa-black: #000000;
-  --bahia-navy:  #123349;
-  --bahia-blue:  #277ACC;
-  --steel:       #3B819C;
-  --grey:        #939498;
+  --chalk:       #BEBDBA;   /* secondary on Costa Black */
+  --concrete:    #5F5E5A;   /* secondary on Paper, 5.9:1 */
   --costa-gold:  #D6AA4F;   /* promotions only */
   --whatsapp:    #25D366;
 
@@ -46,14 +44,6 @@ img, svg { max-width: 100%; display: block; }
 .brand { display: flex; flex-direction: column; gap: 0.4rem; }
 .brand svg, .brand img { width: clamp(150px, 34vw, 210px); height: auto; color: var(--costa-black); }
 
-.endorse {
-  font-size: 0.625rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: var(--grey);
-}
-
 /* language toggle */
 .lang {
   display: inline-flex;
@@ -70,7 +60,7 @@ img, svg { max-width: 100%; display: block; }
   padding: 0.4rem 0.75rem;
   border: 0;
   background: transparent;
-  color: var(--grey);
+  color: var(--concrete);
   cursor: pointer;
 }
 .lang button[aria-pressed="true"] { background: var(--costa-black); color: var(--paper); }
@@ -101,7 +91,7 @@ h1 .plus { color: var(--costa-gold); }
   font-size: clamp(0.8rem, 0.7rem + 0.4vw, 0.95rem);
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--grey);
+  color: var(--concrete);
   font-weight: 600;
   margin: 0.9rem 0 0;
 }
@@ -176,7 +166,7 @@ h1 .plus { color: var(--costa-gold); }
   font-weight: 600;
   line-height: 1.35;
 }
-.coach .traits { color: var(--grey); font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase; margin: 0.65rem 0 0; }
+.coach .traits { color: var(--concrete); font-size: 0.875rem; letter-spacing: 0.06em; text-transform: uppercase; margin: 0.65rem 0 0; }
 
 /* ---------- amenities ---------- */
 
@@ -195,7 +185,7 @@ h1 .plus { color: var(--costa-gold); }
   .amenities { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 1rem var(--gap); }
 }
 .amenity { margin: 0; display: flex; align-items: center; gap: 0.7rem; font-weight: 600; font-size: 0.95rem; }
-.amenity svg { width: 1.4rem; height: 1.4rem; color: var(--steel); flex: none; }
+.amenity svg { width: 1.4rem; height: 1.4rem; color: var(--costa-black); flex: none; }
 
 /* ---------- section heads ---------- */
 
@@ -237,18 +227,15 @@ h2 {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--paper);
-  background: var(--steel);
+  background: var(--costa-black);
   border-radius: 3px;
   padding: 0.15rem 0.45rem;
   margin-bottom: 0.5rem;
 }
-.slot .days { color: var(--grey); font-size: 0.875rem; margin: 0; }
+.slot .days { color: var(--concrete); font-size: 0.875rem; margin: 0; }
 .slot .time { font-weight: 700; font-variant-numeric: tabular-nums; margin: 0.15rem 0 0; }
 
-/* Brand grey (#939498) on Paper is only 2.7:1. Fine for the tracked uppercase
-   labels, too weak for a sentence someone actually has to read — so this one
-   line uses Bahia Navy instead. See README. */
-.note { color: var(--bahia-navy); font-size: 0.875rem; margin: 1rem 0 0; }
+.note { color: var(--concrete); font-size: 0.875rem; margin: 1rem 0 0; }
 
 /* ---------- offer panel (Costa Black + gold) ---------- */
 
@@ -293,13 +280,13 @@ h2 {
 }
 .plan .price small { font-size: 0.3em; letter-spacing: 0.1em; font-weight: 700; }
 .plan .term { margin: 0.4rem 0 0; font-weight: 600; }
-.plan .after { margin: 0.2rem 0 0; color: #b9b9b9; font-size: 0.875rem; }
+.plan .after { margin: 0.2rem 0 0; color: var(--chalk); font-size: 0.875rem; }
 
 .offer-extras { margin-top: var(--gap); padding-top: 1.5rem; border-top: 1px solid rgba(214,170,79,0.35); }
 .offer-extras ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
 .offer-extras li { display: flex; gap: 0.65rem; align-items: flex-start; }
 .offer-extras li::before { content: ""; width: 10px; height: 10px; margin-top: 0.45rem; background: var(--costa-gold); flex: none; transform: rotate(45deg); }
-.offer .fineprint { color: #9a9a9a; font-size: 0.8125rem; margin: 1.25rem 0 0; }
+.offer .fineprint { color: var(--chalk); font-size: 0.8125rem; margin: 1.25rem 0 0; }
 .offer .btn { border-color: var(--costa-gold); background: var(--costa-gold); color: var(--costa-black); }
 .offer .btn:hover { opacity: 0.88; }
 
@@ -324,12 +311,12 @@ h2 {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--grey);
+  color: var(--concrete);
   margin-bottom: 0.25rem;
 }
 .contact dd { margin: 0 0 1.1rem; font-weight: 600; }
-.contact a { color: var(--bahia-navy); text-decoration-color: var(--steel); text-underline-offset: 3px; }
-.contact a:hover { color: var(--bahia-blue); }
+.contact a { color: var(--costa-black); text-decoration-color: var(--costa-gold); text-underline-offset: 3px; }
+.contact a:hover { color: var(--concrete); }
 
 .site-foot {
   border-top: 1px solid rgba(0,0,0,0.1);
@@ -337,7 +324,7 @@ h2 {
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--grey);
+  color: var(--concrete);
   text-align: center;
 }
 
@@ -363,3 +350,18 @@ h2 {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ---------- weekly schedule (home) ---------- */
+
+.week { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.day {
+  border: 1px solid rgba(0,0,0,0.14);
+  border-top: 4px solid var(--costa-black);
+  border-radius: 4px;
+  padding: 1rem 1.15rem;
+  background: #fff;
+}
+.day h3 { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 0.6rem; }
+.day ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+.day li { display: flex; flex-direction: column; font-weight: 600; font-size: 0.9375rem; }
+.day .time { color: var(--concrete); font-weight: 500; font-size: 0.875rem; font-variant-numeric: tabular-nums; }

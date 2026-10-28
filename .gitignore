@@ -1,0 +1,4 @@
+# secrets (git is case-sensitive here, so both spellings)
+.env
+.env.*
+.ENV

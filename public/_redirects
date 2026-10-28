@@ -1,0 +1,11 @@
+# Short links. Printed QR codes point at costacombat.com/<slug>, so a slug is
+# never deleted, only re-pointed. 302 so browsers don't cache the target.
+# Name the slug for where it was seen; utm_content always equals the slug.
+
+/a1   /costa-combat/promos/a/?utm_source=flyer&utm_medium=qr&utm_campaign=lanzamiento&utm_content=a1   302
+/b1   /costa-combat/promos/b/?utm_source=flyer&utm_medium=qr&utm_campaign=lanzamiento&utm_content=b1   302
+/ig   /?utm_source=instagram&utm_medium=bio&utm_content=ig   302
+/gbp  /?utm_source=google&utm_medium=profile&utm_content=gbp   302
+
+# Where short.io sent b1 before the move.
+/promo  /costa-combat/promos/b/?utm_source=flyer&utm_medium=qr&utm_campaign=lanzamiento&utm_content=b1   302

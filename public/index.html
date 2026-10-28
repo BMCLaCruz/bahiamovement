@@ -3,55 +3,196 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bahia Movement Center — La Cruz de Huanacaxtle</title>
-<meta name="description" content="Bahia Movement Center. Estudio de movimiento en La Cruz de Huanacaxtle, Nayarit. Costa Combat: Jiu-Jitsu, Muay Thai, Boxeo y Kickboxing.">
-<link rel="icon" href="/assets/costa-combat-symbol.svg" type="image/svg+xml">
+<title>Costa Combat — Jiu-Jitsu, Muay Thai y Yoga en La Cruz de Huanacaxtle</title>
+<meta name="description" content="Clases de Jiu-Jitsu, Muay Thai y Yoga en La Cruz de Huanacaxtle, Nayarit. Adultos y niños, en español e inglés. Tu primera clase es gratis.">
+<link rel="canonical" href="https://costacombat.com/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:title" content="Costa Combat — Jiu-Jitsu, Muay Thai y Yoga">
+<meta property="og:description" content="Clases para adultos y niños en La Cruz de Huanacaxtle. Tu primera clase es gratis.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:image" content="https://costacombat.com/assets/og-costa-combat.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://costacombat.com/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap">
-<style>
-  :root { --paper:#F4F3F0; --navy:#123349; --blue:#277ACC; --steel:#3B819C; --grey:#939498; }
-  * { box-sizing: border-box; }
-  body {
-    margin:0; min-height:100vh; display:grid; place-items:center;
-    background:var(--paper); color:var(--navy);
-    font-family:Montserrat, system-ui, sans-serif; line-height:1.6;
-    padding:2rem 1.25rem;
-  }
-  main { width:min(100%, 34rem); text-align:center; }
-  h1 {
-    font-size:clamp(1.5rem,1.1rem+1.8vw,2.25rem); font-weight:700;
-    letter-spacing:0.02em; text-transform:uppercase; margin:0;
-  }
-  .rules { display:flex; align-items:center; gap:0.9rem; justify-content:center; margin:0.75rem 0 0; }
-  .rules span { height:2px; width:2.5rem; background:var(--steel); }
-  .sub { font-size:0.75rem; letter-spacing:0.28em; text-transform:uppercase; color:var(--grey); margin:0; }
-  p.lede { margin:2rem 0 0; }
-  .links { display:flex; flex-wrap:wrap; gap:0.75rem; justify-content:center; margin:2rem 0 0; }
-  a.card {
-    display:block; padding:0.85rem 1.4rem; border:2px solid var(--navy); border-radius:6px;
-    color:var(--navy); text-decoration:none; font-weight:700;
-  }
-  a.card:hover { background:var(--navy); color:var(--paper); }
-  .meta { margin:2.5rem 0 0; font-size:0.875rem; color:var(--grey); }
-  .meta a { color:var(--navy); text-underline-offset:3px; }
-  .meta a:hover { color:var(--blue); }
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
-<body>
-<main>
-  <h1>Bahia Movement Center</h1>
-  <div class="rules"><span></span><p class="sub">La Cruz de Huanacaxtle</p><span></span></div>
-  <p class="lede">Estudio de movimiento en La Cruz de Huanacaxtle, Nayarit.<br>
-  <span lang="en">A movement studio in La Cruz de Huanacaxtle, Nayarit.</span></p>
-  <div class="links">
-    <a class="card" href="/costa-combat/promos/b/">Costa Combat — Jiu-Jitsu · Muay Thai · Boxeo · Kickboxing</a>
-  </div>
-  <p class="meta">
-    WhatsApp <a href="https://wa.me/523221026023">+52 322 102 6023</a> ·
-    <a href="https://instagram.com/bahiamcenter" rel="noopener">@bahiamcenter</a><br>
-    <a href="https://maps.app.goo.gl/8JTmrWRzeU2gHhZP6" rel="noopener">Torre M · Calamar 12 · La Cruz de Huanacaxtle, Nayarit 63734</a>
-  </p>
-</main>
+<body data-variant="home">
+
+<div class="wrap">
+
+  <header class="site-head">
+    <div class="brand">
+      <img src="/assets/costa-combat-mark.svg" alt="Costa Combat" width="210" height="108">
+    </div>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <p class="eyebrow" data-i18n="eyebrow">La Cruz de Huanacaxtle, Nayarit</p>
+      <h1 data-i18n="h1">Jiu-Jitsu · Muay Thai · Yoga</h1>
+      <p class="lede" data-i18n="lede">Clases para adultos y niños, en español e inglés. Tu primera clase es gratis: llega 10 minutos antes y te preparamos en el tatami.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" data-wa href="https://wa.me/523221026023">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.86 9.86 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.1.81.83-3.03-.2-.31a8.18 8.18 0 0 1-1.26-4.39c0-4.54 3.7-8.23 8.23-8.23a8.18 8.18 0 0 1 8.22 8.24c0 4.54-3.69 8.23-8.23 8.23Zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+          <span data-i18n="cta_main">Agendar mi clase gratis</span>
+        </a>
+        <a class="btn btn-ghost" href="#horarios" data-i18n="cta_sched">Ver horarios</a>
+      </div>
+    </section>
+
+    <section class="schedule" id="horarios">
+      <h2 data-i18n="sched_h">Horarios de clases</h2>
+      <div class="week">
+        <div class="day">
+          <h3 data-i18n="d_mon">Lunes</h3>
+          <ul>
+            <li><span data-i18n="s_yoga">Yoga — Adultos</span><span class="time">8:00 – 9:00 a. m.</span></li>
+            <li><span data-i18n="s_bjj">Jiu-Jitsu — Adultos</span><span class="time">8:30 – 9:30 a. m.</span></li>
+            <li><span data-i18n="s_kids">Jiu-Jitsu kids</span><span class="time">5:00 – 6:00 p. m.</span></li>
+            <li><span data-i18n="s_mt">Muay Thai — Adultos</span><span class="time">6:00 – 7:00 p. m.</span></li>
+            <li><span data-i18n="s_bjj">Jiu-Jitsu — Adultos</span><span class="time">7:00 – 8:00 p. m.</span></li>
+          </ul>
+        </div>
+        <div class="day">
+          <h3 data-i18n="d_tue">Martes</h3>
+          <ul>
+            <li><span data-i18n="s_bjj">Jiu-Jitsu — Adultos</span><span class="time">8:30 – 9:30 a. m.</span></li>
+            <li><span data-i18n="s_kids">Jiu-Jitsu kids</span><span class="time">5:00 – 6:00 p. m.</span></li>
+            <li><span data-i18n="s_bjj">Jiu-Jitsu — Adultos</span><span class="time">7:00 – 8:00 p. m.</span></li>
+          </ul>
+        </div>
+        <div class="day">
+          <h3 data-i18n="d_wed">Miércoles</h3>
+          <ul>
+            <li><span data-i18n="s_yoga">Yoga — Adultos</span><span class="time">8:00 – 9:00 a. m.</span></li>
+            <li><span data-i18n="s_bjj">Jiu-Jitsu — Adultos</span><span class="time">8:30 – 9:30 a. m.</span></li>
+            <li><span data-i18n="s_kids">Jiu-Jitsu kids</span><span class="time">5:00 – 6:00 p. m.</span></li>
+            <li><span data-i18n="s_mt">Muay Thai — Adultos</span><span class="time">6:00 – 7:00 p. m.</span></li>
+            <li><span data-i18n="s_bjj">Jiu-Jitsu — Adultos</span><span class="time">7:00 – 8:00 p. m.</span></li>
+          </ul>
+        </div>
+        <div class="day">
+          <h3 data-i18n="d_thu">Jueves</h3>
+          <ul>
+            <li><span data-i18n="s_bjj">Jiu-Jitsu — Adultos</span><span class="time">8:30 – 9:30 a. m.</span></li>
+            <li><span data-i18n="s_kids">Jiu-Jitsu kids</span><span class="time">5:00 – 6:00 p. m.</span></li>
+            <li><span data-i18n="s_bjj">Jiu-Jitsu — Adultos</span><span class="time">7:00 – 8:00 p. m.</span></li>
+          </ul>
+        </div>
+        <div class="day">
+          <h3 data-i18n="d_fri">Viernes</h3>
+          <ul>
+            <li><span data-i18n="s_yoga">Yoga — Adultos</span><span class="time">8:00 – 9:00 a. m.</span></li>
+            <li><span data-i18n="s_bjj">Jiu-Jitsu — Adultos</span><span class="time">8:30 – 9:30 a. m.</span></li>
+            <li><span data-i18n="s_mt">Muay Thai — Adultos</span><span class="time">6:00 – 7:00 p. m.</span></li>
+            <li><span data-i18n="s_bjj">Jiu-Jitsu — Adultos</span><span class="time">7:00 – 8:00 p. m.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="note" data-i18n="sched_note">Muay Thai incluye boxeo. Hasta 3 clases por semana por disciplina, según tu plan.</p>
+    </section>
+
+    <section class="coaches" aria-label="Instructores">
+      <div class="coach">
+        <figure>
+          <img src="/assets/alan.jpg" alt="Alan Pineda" width="1098" height="976" loading="lazy">
+          <figcaption>
+            <h3>Alan <span class="sur">Pineda</span></h3>
+            <p class="disc" data-i18n="alan_disc">Jiu-Jitsu</p>
+            <p class="cred" data-i18n="alan_cred">Cinturón negro 2.º grado</p>
+            <p class="traits" data-i18n="alan_traits">Técnica · Control · Confianza</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="coach">
+        <figure>
+          <img src="/assets/ivan.jpg" alt="Iván Centeno" width="960" height="1280" loading="lazy">
+          <figcaption>
+            <h3>Iván <span class="sur">Centeno</span></h3>
+            <p class="disc" data-i18n="ivan_disc">Muay Thai · Boxeo</p>
+            <p class="cred" data-i18n="ivan_cred">Instrucción de boxeo profesional</p>
+            <p class="traits" data-i18n="ivan_traits">Fuerza · Resistencia · Resultados</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="amenities" aria-label="Instalaciones">
+      <p class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span data-i18n="am_lang">Clases bilingües</span></p>
+      <p class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="5" width="20" height="9" rx="2"/><path d="M7 18v2M12 18v2M17 18v2"/></svg><span data-i18n="am_ac">Aire acondicionado</span></p>
+      <p class="amenity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2.7s6 6.3 6 10.3a6 6 0 0 1-12 0c0-4 6-10.3 6-10.3Z"/></svg><span data-i18n="am_water">Agua filtrada</span></p>
+    </section>
+
+    <section class="contact">
+      <h2 data-i18n="contact_h">Visítanos</h2>
+      <dl class="contact-grid">
+        <div>
+          <dt data-i18n="c_wa">WhatsApp</dt>
+          <dd><a data-wa href="https://wa.me/523221026023">+52 322 102 6023</a></dd>
+        </div>
+        <div>
+          <dt>Instagram</dt>
+          <dd><a href="https://instagram.com/bahiamcenter" rel="noopener">@bahiamcenter</a></dd>
+        </div>
+        <div>
+          <dt data-i18n="c_site">Sitio</dt>
+          <dd><a href="https://costacombat.com">costacombat.com</a></dd>
+        </div>
+        <div>
+          <dt data-i18n="c_addr">Dirección</dt>
+          <dd><a href="https://maps.app.goo.gl/8JTmrWRzeU2gHhZP6" rel="noopener" data-i18n="c_addr_v">Calamar 9 (dentro de Torre N)<br>La Cruz de Huanacaxtle, Nayarit</a></dd>
+        </div>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">Costa Combat</footer>
+</div>
+
+<div class="sticky-cta">
+  <a class="btn" data-wa href="https://wa.me/523221026023">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.3-1.39a9.86 9.86 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Zm4.52 12.15c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+    <span data-i18n="cta_sticky">Primera clase gratis</span>
+  </a>
+</div>
+
+<script>
+window.EN_STRINGS = {
+  __title: "Costa Combat — Brazilian Jiu-Jitsu, Muay Thai and Yoga in La Cruz de Huanacaxtle",
+  eyebrow: "La Cruz de Huanacaxtle, Nayarit",
+  h1: "BJJ · Muay Thai · Yoga",
+  lede: "Classes for adults and kids, in English and Spanish. Your first class is free: arrive 10 minutes early and we'll set you up on the mat.",
+  cta_main: "Book my free class",
+  cta_sched: "See class times",
+  cta_sticky: "Free first class",
+  sched_h: "Class times",
+  d_mon: "Monday", d_tue: "Tuesday", d_wed: "Wednesday", d_thu: "Thursday", d_fri: "Friday",
+  s_yoga: "Yoga — Adults", s_bjj: "BJJ — Adults", s_kids: "BJJ Kids", s_mt: "Muay Thai — Adults",
+  sched_note: "Muay Thai includes boxing. Up to 3 classes per week per discipline, depending on your plan.",
+  alan_disc: "Brazilian Jiu-Jitsu",
+  alan_cred: "Second-degree black belt",
+  alan_traits: "Technique · Control · Confidence",
+  ivan_disc: "Muay Thai · Boxing",
+  ivan_cred: "Professional boxing instruction",
+  ivan_traits: "Strength · Endurance · Results",
+  am_lang: "Bilingual classes", am_ac: "Air conditioning", am_water: "Filtered water",
+  contact_h: "Come see us",
+  c_wa: "WhatsApp", c_site: "Website", c_addr: "Address",
+  c_addr_v: "Calamar 9 (inside Torre N)<br>La Cruz de Huanacaxtle, Nayarit"
+};
+</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
