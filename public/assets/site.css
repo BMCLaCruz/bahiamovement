@@ -372,8 +372,15 @@ h2 {
   background: #fff;
 }
 .day h3 { font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 0.6rem; }
-.day ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
-.day li { display: flex; flex-direction: column; font-weight: 600; font-size: 0.9375rem; }
+.day ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.15rem; }
+.day ul { margin-inline: -0.5rem; }
+.day li a {
+  display: flex; flex-direction: column;
+  padding: 0.3rem 0.5rem; border-radius: 4px;
+  color: inherit; text-decoration: none; font-weight: 600; font-size: 0.9375rem;
+}
+.day li a:hover, .day li a:focus-visible { background: var(--paper); }
+.day li a:focus-visible { outline: 2px solid var(--costa-black); outline-offset: 1px; }
 .day .time { color: var(--concrete); font-weight: 500; font-size: 0.875rem; font-variant-numeric: tabular-nums; }
 
 /* ---------- dojo photo (home) ---------- */

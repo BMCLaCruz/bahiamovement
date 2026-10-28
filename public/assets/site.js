@@ -50,6 +50,19 @@
       href = WA_BASE + "?text=" + encodeURIComponent(text);
     }
     document.querySelectorAll("[data-wa]").forEach(function (a) { a.href = href; });
+
+    /* Schedule entries book their own slot. Runs after the language swap, so
+       the day, class and time are read in the language on screen. */
+    if (WA_BASE.indexOf("wa.me") === -1) return;
+    document.querySelectorAll("[data-wa-slot]").forEach(function (a) {
+      var day = a.closest(".day").querySelector("h3").textContent.trim();
+      var cls = a.querySelector("[data-i18n]").textContent.trim();
+      var time = a.querySelector(".time").textContent.trim();
+      var text = lang === "en"
+        ? "Hi, I'd like to book: " + cls + ", " + day + " " + time
+        : "Hola, quiero reservar: " + cls + ", " + day.toLowerCase() + " " + time;
+      a.href = WA_BASE + "?text=" + encodeURIComponent(text);
+    });
   }
 
   /* ---- language ---- */

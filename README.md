@@ -128,6 +128,11 @@ The conversion happens inside WhatsApp, where page analytics cannot see it. Two 
 Whoever answers WhatsApp can tell the arms apart without asking. For a launch
 this size, counting messages by wording is a perfectly good read.
 
+**Home schedule entries book their own slot.** Each class in the weekly
+schedule is a WhatsApp link (`data-wa-slot`) whose message names the class, day
+and time in the language on screen: "Hola, quiero reservar: Jiu-Jitsu — Adultos,
+lunes 8:30 – 9:30 a. m." Edit the schedule in `index.html`; the messages follow.
+
 **"el folleto" is swapped from `utm_source`**, so digital traffic labels itself:
 `utm_source=instagram` produces "vi el Instagram de Costa Combat" (and "Instagram
 post" in English). Add new sources to the `SOURCE` map in `assets/site.js`.
