@@ -379,5 +379,7 @@ h2 {
 /* ---------- dojo photo (home) ---------- */
 
 .dojo { margin: 0; padding-top: var(--gap); border-top: 1px solid rgba(0,0,0,0.1); }
-.dojo img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; background: #ddd; }
+/* banner crop: keeps the far wall and the mat, drops ceiling and foreground */
+.dojo img { width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; object-position: 50% 22%; border-radius: 8px; background: #ddd; }
+@media (min-width: 48rem) { .dojo img { aspect-ratio: 3 / 1; } }
 .dojo + .schedule { border-top: 0; }
