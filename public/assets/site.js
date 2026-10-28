@@ -17,6 +17,7 @@
     instagram: { es: "el Instagram", en: "Instagram post" },
     facebook:  { es: "el Facebook",  en: "Facebook post" },
     google:    { es: "la página",    en: "listing" },
+    whatsapp:  { es: "el perfil de WhatsApp", en: "WhatsApp profile" },
     _default:  { es: "la página",    en: "page" }
   };
 

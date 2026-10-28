@@ -104,6 +104,7 @@ ig        Instagram bio (permanent — re-point it each campaign)
 ig1 ig2   specific posts or stories
 fb1       Meta ad
 gbp       Google Business Profile
+wa        WhatsApp Business profile (/WA works too)
 a2 b2     second print run
 p1        partner venue poster
 ```
