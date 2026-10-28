@@ -198,9 +198,10 @@ re-pointing in `_redirects` too — never delete them.
 - **Image weight.** The portraits ship as the original JPEGs (~125 KB each) and
   the social preview is a 36 KB PNG. Converting to WebP/AVIF and adding `srcset`
   would cut that a lot; it needs image tooling that is not installed here.
-- **Address follows guide v2.0.1:** visitors get `Calamar 9 (dentro de Torre N)
-  · La Cruz de Huanacaxtle, Nayarit`; `Torre N, Calamar #12` is the legal form,
-  not used on the site.
+- **Address (owner, 28 Oct 2026):** text says `Calamar 12 (dentro de Torre N)
+  · La Cruz de Huanacaxtle, Nayarit`, replacing guide v2.0.1's Calamar 9. The
+  map link stays on the Google Maps entry listed as Calamar 9, which shows the
+  building correctly.
 - **The map link is a `maps.app.goo.gl` shortener.** It was set up to resolve to
   a place entry named "Torre M" at 20.7539361, -105.3775034. The guide now says
   the building is Torre N; check the pin still lands on the right door.
