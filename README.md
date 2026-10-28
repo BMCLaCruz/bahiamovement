@@ -143,6 +143,13 @@ new page; automatic injection is off because it skips Worker responses. It repor
 page — per A/B arm — but not per `utm_source`. The WhatsApp prefill above is
 what separates channels.
 
+**Google Ads conversions** come from the Google tag (`AW-18515765135`) in the
+`<head>` of every page. `assets/site.js` reports the "WhatsApp click" conversion
+on any click on a `wa.me` link, so Performance Max optimises for WhatsApp
+chats. Unlike the Cloudflare beacon, the Google tag sets cookies. Add the tag to
+any new page; `404.html` has it but does not load `site.js`, so its WhatsApp
+links are not counted.
+
 ## Editing
 
 Spanish lives in the HTML. English lives in the `window.EN_STRINGS` object at the

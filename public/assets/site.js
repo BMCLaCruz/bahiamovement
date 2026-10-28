@@ -1,4 +1,4 @@
-/* Costa Combat pages — language toggle + WhatsApp prefill.
+/* Costa Combat pages — language toggle + WhatsApp prefill + Ads conversion.
    Spanish is in the HTML; English lives in DICT below. If this script fails,
    the page still reads correctly in Spanish. */
 (function () {
@@ -115,4 +115,16 @@
   });
 
   setLang(initial, false);
+
+  /* ---- Google Ads conversion ---- */
+
+  /* Every WhatsApp link counts, wherever it sits on the page. The Google tag in
+     each page's <head> defines gtag; gtag sends by beacon, so the hit survives
+     the navigation to wa.me. */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="wa.me"]');
+    if (a && typeof window.gtag === "function") {
+      window.gtag("event", "conversion", { send_to: "AW-18515765135/pztFCPWzoq0dEI_PgP1E" });
+    }
+  });
 })();
