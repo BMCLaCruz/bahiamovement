@@ -41,7 +41,7 @@ flyer B (schedules)  QR -> costacombat.com/b1 -> /costa-combat/promos/b/
 ```
 
 The two pages are deliberately identical except for one block. A shows the
-launch prices; B replaces that block with the free trial class and pushes the
+prices; B replaces that block with the free trial class and pushes the
 pricing conversation into WhatsApp. Everything else — layout, photos, schedule,
 copy, CTA placement — is the same on purpose. If anything else differs, the
 test stops measuring pricing and starts measuring layout.
@@ -120,7 +120,7 @@ The conversion happens inside WhatsApp, where page analytics cannot see it. Two 
 
 | Page | Prefill (ES) |
 |---|---|
-| A | Hola, vi el folleto de Costa Combat. Me interesa la promoción de lanzamiento de 2 disciplinas. |
+| A | Hola, vi el folleto de Costa Combat. Me interesa inscribirme en un plan. |
 | B | Hola, vi el folleto de Costa Combat. Quiero información de horarios y planes. |
 
 Whoever answers WhatsApp can tell the arms apart without asking. For a launch
@@ -172,10 +172,10 @@ re-pointing in `_redirects` too — never delete them.
   the outlines were filled instead, so the SVG carries no font dependency. The
   `Costa-Combat-Logo-A-*` files elsewhere in the project are the JPEG traces the
   guide says not to use.
-- **Kids "2 disciplines"** is on page A as it appears on the flyer, by decision.
-  Brand Reference v2.3 says kids are Jiu-Jitsu only and that no kids offer can
-  include two disciplines, and both flyer schedules list only Jiu-Jitsu kids.
-  Worth resolving before the next print run.
+- **Prices (28 Oct 2026):** unlimited plans — $1,500 MXN one discipline (BJJ all
+  5 days or Muay Thai all 3), $1,800 two, $1,500 Jiu-Jitsu kids; $500
+  registration. The launch offer is over, so page A's panel carries no gold. The
+  printed flyer A still shows the launch prices.
 - **Photo framing not visually confirmed.** The portraits are square-cropped with
   `object-position: 50% 25%`. Eyeball both on a phone; if a face sits badly,
   adjust that one value in `.coach img`.

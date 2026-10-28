@@ -290,6 +290,16 @@ h2 {
 .offer .btn { border-color: var(--costa-gold); background: var(--costa-gold); color: var(--costa-black); }
 .offer .btn:hover { opacity: 0.88; }
 
+/* pricing panel — variant A. Regular prices, no offer running, so no gold. */
+.pricing .plan h3, .pricing .plan .price { color: var(--paper); }
+/* three plans side by side: smaller figures, and keep "MXN / mes" on one line */
+.pricing .plan .price { font-size: clamp(2.25rem, 1.4rem + 2.4vw, 2.9rem); }
+.pricing .plan .price small { white-space: nowrap; }
+.pricing .plan .term { color: var(--chalk); font-weight: 500; }
+.pricing .offer-extras { border-top-color: rgba(244,243,240,0.2); }
+.pricing .offer-extras li::before { background: var(--chalk); }
+.pricing .btn { background: var(--paper); border-color: var(--paper); color: var(--costa-black); }
+
 /* trial panel — variant B */
 .trial { text-align: left; }
 .trial .plans { grid-template-columns: 1fr; }

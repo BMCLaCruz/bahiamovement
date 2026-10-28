@@ -22,8 +22,8 @@
 
   var MESSAGE = {
     a: {
-      es: "Hola, vi {src} de Costa Combat. Me interesa la promoción de lanzamiento de 2 disciplinas.",
-      en: "Hi, I saw the Costa Combat {src}. I'm interested in the launch offer for 2 disciplines."
+      es: "Hola, vi {src} de Costa Combat. Me interesa inscribirme en un plan.",
+      en: "Hi, I saw the Costa Combat {src}. I'd like to sign up for a plan."
     },
     b: {
       es: "Hola, vi {src} de Costa Combat. Quiero información de horarios y planes.",
