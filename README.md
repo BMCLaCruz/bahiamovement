@@ -146,7 +146,9 @@ what separates channels.
 **Google Ads conversions** come from the Google tag (`AW-18515765135`) in the
 `<head>` of every page. `assets/site.js` reports the "WhatsApp click" conversion
 on any click on a `wa.me` link, so Performance Max optimises for WhatsApp
-chats. Unlike the Cloudflare beacon, the Google tag sets cookies. Add the tag to
+chats. The campaign's final URL suffix adds `utm_source=ads`, so ad leads
+arrive saying "vi el anuncio de Costa Combat" (`google` is taken by the
+Business Profile slug). Unlike the Cloudflare beacon, the Google tag sets cookies. Add the tag to
 any new page; `404.html` has it but does not load `site.js`, so its WhatsApp
 links are not counted.
 
