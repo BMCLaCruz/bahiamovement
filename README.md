@@ -128,10 +128,9 @@ The conversion happens inside WhatsApp, where page analytics cannot see it. Two 
 Whoever answers WhatsApp can tell the arms apart without asking. For a launch
 this size, counting messages by wording is a perfectly good read.
 
-**Home schedule entries book their own slot, in two steps.** Tapping a class
-(`data-wa-slot`) selects it and opens a "Reservar por WhatsApp" button under
-it; only that button opens the chat. Without JS the class links open WhatsApp
-directly. The message names the class, day and time in the language on screen: "Hola, quiero reservar: Jiu-Jitsu — Adultos,
+**Home schedule entries book their own slot.** Each class in the weekly
+schedule is a WhatsApp link (`data-wa-slot`) whose message names the class, day
+and time in the language on screen: "Hola, quiero reservar: Jiu-Jitsu — Adultos,
 lunes 8:30 – 9:30 a. m." Edit the schedule in `index.html`; the messages follow.
 
 **"el folleto" is swapped from `utm_source`**, so digital traffic labels itself:
