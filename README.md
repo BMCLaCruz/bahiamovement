@@ -131,7 +131,8 @@ this size, counting messages by wording is a perfectly good read.
 post" in English). Add new sources to the `SOURCE` map in `assets/site.js`.
 
 **Visit counts** come from Cloudflare Web Analytics (cookieless, no consent
-banner). It reports paths but ignores query strings, so it counts visits per
+banner). The beacon is a `<script>` at the bottom of every page — add it to any
+new page; automatic injection is off because it skips Worker responses. It reports paths but ignores query strings, so it counts visits per
 page — per A/B arm — but not per `utm_source`. The WhatsApp prefill above is
 what separates channels.
 
