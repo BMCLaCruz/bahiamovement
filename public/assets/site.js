@@ -63,7 +63,41 @@
         : "Hola, quiero reservar: " + cls + ", " + day.toLowerCase() + " " + time;
       a.href = WA_BASE + "?text=" + encodeURIComponent(text);
     });
+    syncBook(lang);
   }
+
+  /* ---- schedule: first tap selects a class, the Book button opens WhatsApp ---- */
+
+  var BOOK = { es: "Reservar por WhatsApp", en: "Book on WhatsApp" };
+  var book = document.createElement("a");
+  book.className = "btn btn-primary book";
+
+  function syncBook(lang) {
+    var sel = document.querySelector('[data-wa-slot][aria-pressed="true"]');
+    if (!sel) return;
+    book.href = sel.href;
+    book.textContent = BOOK[lang] || BOOK.es;
+  }
+
+  function select(a) {
+    var on = a.getAttribute("aria-pressed") !== "true";
+    document.querySelectorAll('[data-wa-slot][aria-pressed="true"]').forEach(function (x) {
+      x.setAttribute("aria-pressed", "false");
+    });
+    if (!on) { book.remove(); return; }
+    a.setAttribute("aria-pressed", "true");
+    a.parentNode.appendChild(book);   // right after the class, so Tab reaches it next
+    syncBook(document.documentElement.lang);
+  }
+
+  document.querySelectorAll("[data-wa-slot]").forEach(function (a) {
+    a.setAttribute("role", "button");
+    a.setAttribute("aria-pressed", "false");
+    a.addEventListener("click", function (e) { e.preventDefault(); select(a); });
+    a.addEventListener("keydown", function (e) {   // buttons also activate on Space
+      if (e.key === " ") { e.preventDefault(); select(a); }
+    });
+  });
 
   /* ---- language ---- */
 
