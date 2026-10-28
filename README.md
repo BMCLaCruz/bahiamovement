@@ -130,7 +130,7 @@ this size, counting messages by wording is a perfectly good read.
 
 **Home schedule entries book their own slot.** Each class in the weekly
 schedule is a WhatsApp link (`data-wa-slot`) whose message names the class, day
-and time in the language on screen: "Hola, quiero reservar: Jiu-Jitsu — Adultos,
+and time in the language on screen: "Hola, quiero reservar una clase de prueba gratis: Jiu-Jitsu — Adultos,
 lunes 8:30 – 9:30 a. m." Edit the schedule in `index.html`; the messages follow.
 
 **"el folleto" is swapped from `utm_source`**, so digital traffic labels itself:

@@ -59,8 +59,8 @@
       var cls = a.querySelector("[data-i18n]").textContent.trim();
       var time = a.querySelector(".time").textContent.trim();
       var text = lang === "en"
-        ? "Hi, I'd like to book: " + cls + ", " + day + " " + time
-        : "Hola, quiero reservar: " + cls + ", " + day.toLowerCase() + " " + time;
+        ? "Hi, I'd like to book a free trial lesson: " + cls + ", " + day + " " + time
+        : "Hola, quiero reservar una clase de prueba gratis: " + cls + ", " + day.toLowerCase() + " " + time;
       a.href = WA_BASE + "?text=" + encodeURIComponent(text);
     });
   }
