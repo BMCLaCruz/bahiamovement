@@ -52,8 +52,9 @@ img, svg { max-width: 100%; display: block; }
   overflow: hidden;
   flex: none;
 }
-.lang button {
+.lang button, .lang a {
   font: inherit;
+  text-decoration: none;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -63,7 +64,7 @@ img, svg { max-width: 100%; display: block; }
   color: var(--concrete);
   cursor: pointer;
 }
-.lang button[aria-pressed="true"] { background: var(--costa-black); color: var(--paper); }
+.lang button[aria-pressed="true"], .lang a[aria-current="page"] { background: var(--costa-black); color: var(--paper); }
 
 /* ---------- hero ---------- */
 
@@ -86,6 +87,8 @@ h1 {
   text-transform: uppercase;
 }
 h1 .plus { color: var(--costa-gold); }
+/* Home puts the town inside the h1 for search, styled as the eyebrow line */
+h1 .eyebrow { display: block; line-height: 1.55; }
 
 .tagline {
   font-size: clamp(0.8rem, 0.7rem + 0.4vw, 0.95rem);
@@ -190,6 +193,11 @@ h1 .plus { color: var(--costa-gold); }
 /* ---------- section heads ---------- */
 
 section { scroll-margin-top: 1rem; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 
 h2 {
   font-size: clamp(1.4rem, 1.1rem + 1.2vw, 1.9rem);
@@ -315,6 +323,13 @@ h2 {
 /* ---------- contact ---------- */
 
 .contact { padding: var(--gap) 0; border-top: 1px solid rgba(0,0,0,0.1); }
+
+/* ---------- FAQ (home) ---------- */
+
+.faq { padding: var(--gap) 0; border-top: 1px solid rgba(0,0,0,0.1); }
+.faq h3 { font-size: 1rem; margin: 1.25rem 0 0.25rem; }
+.faq h2 + h3 { margin-top: 0; }
+.faq p { margin: 0; max-width: 62ch; color: var(--concrete); }
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.25rem var(--gap); }
 .contact dt {
   font-size: 0.6875rem;

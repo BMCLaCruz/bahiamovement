@@ -14,17 +14,55 @@
 <title>Costa Combat — Jiu-Jitsu, Muay Thai y Yoga en La Cruz de Huanacaxtle</title>
 <meta name="description" content="Clases de Jiu-Jitsu, Muay Thai y Yoga en La Cruz de Huanacaxtle, Nayarit. Adultos y niños, en español e inglés. Tu primera clase es gratis.">
 <link rel="canonical" href="https://costacombat.com/">
+<link rel="alternate" hreflang="es" href="https://costacombat.com/">
+<link rel="alternate" hreflang="en" href="https://costacombat.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://costacombat.com/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta property="og:title" content="Costa Combat — Jiu-Jitsu, Muay Thai y Yoga">
 <meta property="og:description" content="Clases para adultos y niños en La Cruz de Huanacaxtle. Tu primera clase es gratis.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:image" content="https://costacombat.com/assets/og-costa-combat.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://costacombat.com/">
 <meta name="twitter:card" content="summary_large_image">
+<!-- Business details for Google. Keep in step with /en/index.html and the Google Business Profile. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "@id": "https://costacombat.com/#gym",
+  "name": "Costa Combat",
+  "description": "Clases de Jiu-Jitsu, Muay Thai y Yoga para adultos y niños, en español e inglés.",
+  "url": "https://costacombat.com/",
+  "image": "https://costacombat.com/assets/dojo.jpg",
+  "logo": "https://costacombat.com/assets/apple-touch-icon.png",
+  "telephone": "+52 322 102 6023",
+  "priceRange": "$1,500–$1,800 MXN / mes",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calamar 12, Torre N",
+    "addressLocality": "La Cruz de Huanacaxtle",
+    "addressRegion": "Nayarit",
+    "addressCountry": "MX"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 20.7539361, "longitude": -105.3775034 },
+  "hasMap": "https://maps.app.goo.gl/8JTmrWRzeU2gHhZP6",
+  "areaServed": ["La Cruz de Huanacaxtle", "Bucerías", "Punta de Mita", "Nuevo Vallarta", "Riviera Nayarit"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Friday"], "opens": "08:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Thursday"], "opens": "08:30", "closes": "20:00" }
+  ],
+  "sameAs": ["https://instagram.com/bahiamcenter"],
+  "employee": [
+    { "@type": "Person", "name": "Alan Pineda", "jobTitle": "Instructor de Jiu-Jitsu, cinturón negro 2.º grado" },
+    { "@type": "Person", "name": "Iván Centeno", "jobTitle": "Instructor de Muay Thai y Boxeo" }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
@@ -38,17 +76,16 @@
     <div class="brand">
       <img src="/assets/costa-combat-mark.svg" alt="Costa Combat" width="210" height="108">
     </div>
-    <div class="lang" role="group" aria-label="Idioma / Language">
-      <button type="button" data-lang="es" aria-pressed="true">ES</button>
-      <button type="button" data-lang="en" aria-pressed="false">EN</button>
-    </div>
+    <nav class="lang" aria-label="Idioma / Language">
+      <a href="/" hreflang="es" lang="es" aria-current="page">ES</a>
+      <a href="/en/" hreflang="en" lang="en">EN</a>
+    </nav>
   </header>
 
   <main>
 
     <section class="hero">
-      <p class="eyebrow" data-i18n="eyebrow">La Cruz de Huanacaxtle, Nayarit</p>
-      <h1 data-i18n="h1">Jiu-Jitsu · Muay Thai · Yoga</h1>
+      <h1><span class="eyebrow">La Cruz de Huanacaxtle, Nayarit</span> Jiu-Jitsu · Muay Thai · Yoga</h1>
       <p class="lede" data-i18n="lede">Clases para adultos y niños, en español e inglés. Tu primera clase es gratis: llega 10 minutos antes y te preparamos en el tatami.</p>
       <div class="cta-row">
         <a class="btn btn-primary" data-wa href="https://wa.me/523221026023">
@@ -59,10 +96,11 @@
       </div>
     </section>
 
-    <section class="coaches" aria-label="Instructores">
+    <section class="coaches" aria-labelledby="coaches-h">
+      <h2 id="coaches-h" class="sr-only">Instructores</h2>
       <div class="coach">
         <figure>
-          <img src="/assets/alan.jpg" alt="Alan Pineda" width="1098" height="976" loading="lazy">
+          <picture><source srcset="/assets/alan.webp" type="image/webp"><img src="/assets/alan.jpg" alt="Alan Pineda" width="1098" height="976" loading="lazy"></picture>
           <figcaption>
             <h3>Alan <span class="sur">Pineda</span></h3>
             <p class="disc" data-i18n="alan_disc">Jiu-Jitsu</p>
@@ -73,7 +111,7 @@
       </div>
       <div class="coach">
         <figure>
-          <img src="/assets/ivan.jpg" alt="Iván Centeno" width="960" height="1280" loading="lazy">
+          <picture><source srcset="/assets/ivan.webp" type="image/webp"><img src="/assets/ivan.jpg" alt="Iván Centeno" width="960" height="1280" loading="lazy"></picture>
           <figcaption>
             <h3>Iván <span class="sur">Centeno</span></h3>
             <p class="disc" data-i18n="ivan_disc">Muay Thai · Boxeo</p>
@@ -91,7 +129,7 @@
     </section>
 
     <figure class="dojo">
-      <img src="/assets/dojo.jpg" alt="El tatami de Costa Combat" data-i18n-attr="alt:dojo_alt" width="1280" height="720" loading="lazy">
+      <picture><source srcset="/assets/dojo.webp" type="image/webp"><img src="/assets/dojo.jpg" alt="El tatami de Costa Combat" width="1280" height="720" loading="lazy"></picture>
     </figure>
 
     <section class="schedule" id="horarios">
@@ -146,6 +184,20 @@
       <p class="note" data-i18n="sched_note">Muay Thai incluye boxeo. Con el plan ilimitado entrenas Jiu-Jitsu los 5 días y Muay Thai los 3. Toca una clase para reservarla por WhatsApp.</p>
     </section>
 
+    <section class="faq">
+      <h2>Preguntas frecuentes</h2>
+      <h3>¿Necesito experiencia?</h3>
+      <p>No. Tu primera clase es gratis: llega 10 minutos antes y te preparamos en el tatami.</p>
+      <h3>¿Cuánto cuesta?</h3>
+      <p>Planes mensuales ilimitados: $1,500 MXN por una disciplina (Jiu-Jitsu los 5 días o Muay Thai los 3), $1,800 MXN por las dos y $1,500 MXN Jiu-Jitsu kids. Inscripción: $500 MXN.</p>
+      <h3>¿Hay clases para niños?</h3>
+      <p>Sí. Jiu-Jitsu kids, de lunes a jueves de 5:00 a 6:00 p. m.</p>
+      <h3>¿Las clases son en inglés?</h3>
+      <p>Todas las clases son bilingües, en español e inglés.</p>
+      <h3>¿Dónde están?</h3>
+      <p>En Calamar 12, dentro de Torre N, en La Cruz de Huanacaxtle: entre Bucerías y Punta de Mita, en la Riviera Nayarit.</p>
+    </section>
+
     <section class="contact">
       <h2 data-i18n="contact_h">Visítanos</h2>
       <dl class="contact-grid">
@@ -180,32 +232,6 @@
   </a>
 </div>
 
-<script>
-window.EN_STRINGS = {
-  __title: "Costa Combat — Brazilian Jiu-Jitsu, Muay Thai and Yoga in La Cruz de Huanacaxtle",
-  eyebrow: "La Cruz de Huanacaxtle, Nayarit",
-  h1: "BJJ · Muay Thai · Yoga",
-  lede: "Classes for adults and kids, in English and Spanish. Your first class is free: arrive 10 minutes early and we'll set you up on the mat.",
-  cta_main: "Book my free class",
-  cta_sched: "See class times",
-  cta_sticky: "Free first class",
-  sched_h: "Class times",
-  d_mon: "Monday", d_tue: "Tuesday", d_wed: "Wednesday", d_thu: "Thursday", d_fri: "Friday",
-  s_yoga: "Yoga — Adults", s_bjj: "BJJ — Adults", s_kids: "BJJ Kids", s_mt: "Muay Thai — Adults",
-  sched_note: "Muay Thai includes boxing. With an unlimited plan you can train BJJ all 5 days and Muay Thai all 3. Tap a class to book it on WhatsApp.",
-  alan_disc: "Brazilian Jiu-Jitsu",
-  alan_cred: "Second-degree black belt",
-  alan_traits: "Technique · Control · Confidence",
-  ivan_disc: "Muay Thai · Boxing",
-  ivan_cred: "Professional boxing instruction",
-  ivan_traits: "Strength · Endurance · Results",
-  dojo_alt: "The mat at Costa Combat",
-  am_lang: "Bilingual classes", am_ac: "Air conditioning", am_water: "Filtered water",
-  contact_h: "Come see us",
-  c_wa: "WhatsApp", c_site: "Website", c_addr: "Address",
-  c_addr_v: "Calamar 12 (inside Torre N)<br>La Cruz de Huanacaxtle, Nayarit"
-};
-</script>
 <script src="/assets/site.js" defer></script>
 <!-- Cloudflare Web Analytics: cookieless. Added by hand because automatic injection skips Worker responses. -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b30c9f7a8ea9481c975953eb0fc84fb1"}'></script>

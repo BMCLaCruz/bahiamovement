@@ -109,13 +109,29 @@
 
   var stored = null;
   try { stored = localStorage.getItem("bmc-lang"); } catch (e) {}
-  var initial = stored || ((navigator.language || "es").toLowerCase().indexOf("es") === 0 ? "es" : "en");
 
-  document.querySelectorAll(".lang button").forEach(function (b) {
-    b.addEventListener("click", function () { setLang(b.dataset.lang, true); });
-  });
-
-  setLang(initial, false);
+  /* Home is one URL per language (/ and /en/) so search engines index both.
+     Its toggle is a pair of links; only an explicit earlier choice redirects,
+     never the browser language, or Googlebot would be sent away from /. */
+  var langLinks = document.querySelectorAll(".lang a[hreflang]");
+  if (langLinks.length) {
+    var here = document.documentElement.lang;
+    langLinks.forEach(function (a) {
+      a.href = a.getAttribute("href") + location.search;   // keeps utm_source for the prefill
+      a.addEventListener("click", function () {
+        try { localStorage.setItem("bmc-lang", a.hreflang); } catch (e) {}
+      });
+    });
+    var other = stored && stored !== here && document.querySelector('.lang a[hreflang="' + stored + '"]');
+    if (other) { location.replace(other.href + location.hash); return; }
+    refreshWhatsApp(here);
+  } else {
+    var initial = stored || ((navigator.language || "es").toLowerCase().indexOf("es") === 0 ? "es" : "en");
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.addEventListener("click", function () { setLang(b.dataset.lang, true); });
+    });
+    setLang(initial, false);
+  }
 
   /* ---- Google Ads conversion ---- */
 

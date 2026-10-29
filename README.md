@@ -12,7 +12,9 @@ landing pages, and the short links that the printed QR codes use.
 ```
 wrangler.jsonc                          Cloudflare Worker config — assets.directory
 public/
-├── index.html                          home: classes, weekly schedule, coaches, contact
+├── index.html                          home (Spanish): classes, schedule, coaches, FAQ, contact
+├── en/index.html                       home (English) — a full copy, see Editing
+├── sitemap.xml                         the two home pages; submit in Search Console
 ├── _redirects                          short links — costacombat.com/a1 and friends
 ├── 404.html                            shown for unknown paths
 ├── _headers                            cache + security headers
@@ -20,8 +22,8 @@ public/
 │   ├── costa-combat-mark.svg           mark-only lockup, extracted from the .ai master
 │   ├── costa-combat-mark-white.svg     same, for dark grounds
 │   ├── favicon.svg  apple-touch-icon.png  from BMC Brand Assets/Costa Combat Avatar + Favicon
-│   ├── alan.jpg  ivan.jpg              instructor portraits
-│   ├── dojo.jpg                        the mat, above the home schedule
+│   ├── alan.jpg  ivan.jpg              instructor portraits (+ .webp, used by the home pages)
+│   ├── dojo.jpg                        the mat, above the home schedule (+ .webp)
 │   ├── og-costa-combat.png             1200x630 social preview (white mark on Costa Black)
 │   ├── site.css                        brand tokens + page styles
 │   └── site.js                         language toggle + WhatsApp prefill
@@ -154,7 +156,17 @@ links are not counted.
 
 ## Editing
 
-Spanish lives in the HTML. English lives in the `window.EN_STRINGS` object at the
+**Home** is two real pages, `/` (Spanish) and `/en/` (English), linked with
+`hreflang` so Google indexes each in its own language. A JS-swapped page only
+ever gets indexed in one. Edit both files together — schedule, FAQ, prices,
+address, and the JSON-LD business block in `<head>`, which must match the Google
+Business Profile. The ES/EN toggle is a pair of links; once a visitor picks one,
+`site.js` remembers it and sends them to that version (never by browser language,
+which would redirect Googlebot). Keep the `data-i18n` on schedule entries: the
+slot booking reads the class name from it.
+
+**Promo pages** keep the in-page toggle: Spanish lives in the HTML, English in the
+`window.EN_STRINGS` object at the
 bottom of each page, keyed by `data-i18n`. To change a Spanish string, edit the
 HTML; to change its English, edit the matching key. If the script fails to load,
 the page still reads correctly in Spanish.
@@ -195,9 +207,9 @@ re-pointing in `_redirects` too — never delete them.
 - **Photo framing not visually confirmed.** The portraits are square-cropped with
   `object-position: 50% 25%`. Eyeball both on a phone; if a face sits badly,
   adjust that one value in `.coach img`.
-- **Image weight.** The portraits ship as the original JPEGs (~125 KB each) and
-  the social preview is a 36 KB PNG. Converting to WebP/AVIF and adding `srcset`
-  would cut that a lot; it needs image tooling that is not installed here.
+- **Image weight.** The home pages serve WebP (about half the size of the JPEGs, made
+  with `cwebp -q 78 -m 6`, available via `nix shell nixpkgs#libwebp`). The promo pages
+  still use the JPEGs. Re-run the conversion if a photo changes.
 - **Address (owner, 28 Oct 2026):** text says `Calamar 12 (dentro de Torre N)
   · La Cruz de Huanacaxtle, Nayarit`, replacing guide v2.0.1's Calamar 9. The
   map link stays on the Google Maps entry listed as Calamar 9, which shows the
