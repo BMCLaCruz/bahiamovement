@@ -22,7 +22,7 @@ public/
 │   ├── costa-combat-mark.svg           mark-only lockup, extracted from the .ai master
 │   ├── costa-combat-mark-white.svg     same, for dark grounds
 │   ├── favicon.svg  apple-touch-icon.png  from BMC Brand Assets/Costa Combat Avatar + Favicon
-│   ├── alan.jpg  ivan.jpg              instructor portraits (+ .webp, used by the home pages)
+│   ├── alan.jpg  ivan.jpg  paulina.jpg instructor portraits (+ .webp, used by the home pages)
 │   ├── dojo.jpg                        the mat, above the home schedule (+ .webp)
 │   ├── og-costa-combat.png             1200x630 social preview (white mark on Costa Black)
 │   ├── site.css                        brand tokens + page styles
